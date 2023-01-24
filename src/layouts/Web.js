@@ -23,6 +23,7 @@ import Manofacturer from "./../components/manofacturer/manofacturer";
 import ItemSupply from "./../components/ItemSupply/index";
 // import Grid from "./../components/Grid";
 import ReactGA from 'react-ga';
+import Electronics from 'views/Electronics/Electronics';
 const TRACKING_ID = "AW-11020047735";
 ReactGA.initialize(TRACKING_ID);
 
@@ -53,6 +54,7 @@ export default function Web() {
                     <Route path="/web/search/parts/:part" component={SearchPartsC} key={11} />
                     <Route path="/web/search/parts/:part" component={SearchpartsV} key={12} />
                     <Route path="/web/terms" component={Terms} key={13} />
+                    <Route path="/web/electronics" component={Electronics} key={14}/>
                     <Redirect from="/web" to="/web/home" />
                 </Switch>
             </div>

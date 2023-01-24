@@ -39,6 +39,9 @@ const Menu = () => {
                     <Link to="/web/" >HOME</Link>
                   </li>
                   <li>
+                    <Link to='/web/electronics'>ELECTRONICS</Link>
+                  </li>
+                  <li>
                     <Link to="/web/rfq">RFQ</Link>
                   </li>
                   <li>
@@ -73,6 +76,7 @@ const Menu = () => {
         </div>
         <div  className='Options'>
           <Link to="/web/" className='href'>HOME</Link>
+          <Link to="/web/electronics" className='href'>ELECTRONICS</Link>
           <Link to="/web/rfq" className='href'>RFQ</Link>
           <Link to="/web/nsns" className='href'>NSNS</Link>
           <Link to="/web/fsg/1" className='href'>FSC LINE CAR</Link>

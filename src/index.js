@@ -7,21 +7,25 @@ import Web from "layouts/Web";
 import LoginComponent from 'auth/Login';
 import LogoutComponent from 'auth/Logout';
 import AuthenticatedRoute from './AuthenticatedRoute';
+import { ThemeProvider } from '@mui/private-theming';
+import theme from 'assets/theme';
 
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import "assets/css/material-dashboard-react.css?v=1.10.0";
 
 ReactDOM.render(
-    <BrowserRouter basename="/">
-        <Switch>
-            <Route path="/web" component={Web} />
-            <Route path="/login" exact component={LoginComponent} />
-            <AuthenticatedRoute path="/admin" component={Admin} />
-            <AuthenticatedRoute path="/logout" exact component={LogoutComponent} />
-            <Redirect from="/" to="/web/" />
-        </Switch>
-    </BrowserRouter>,
+    <ThemeProvider theme={theme}>
+        <BrowserRouter basename="/">
+            <Switch>
+                <Route path="/web" component={Web} />
+                <Route path="/login" exact component={LoginComponent} />
+                <AuthenticatedRoute path="/admin" component={Admin} />
+                <AuthenticatedRoute path="/logout" exact component={LogoutComponent} />
+                <Redirect from="/" to="/web/" />
+            </Switch>
+        </BrowserRouter>
+    </ThemeProvider>,
     document.getElementById("root")
 );
 
