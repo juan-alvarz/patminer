@@ -1,0 +1,619 @@
+.contentHeaderNsns .headerNsns {
+    margin-top: -80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    height: 78vh;
+    z-index: 4;
+    position: relative;
+}
+
+.contentHeaderNsns .headerNsns h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.selectLetters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-inline: 10px;
+}
+
+.selectLetters .labelLetters {
+    background-color: #32485e;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 5px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s;
+    position: relative;
+    top: 0px;
+    font-weight: bold;
+}
+
+.selectLetters .labelLetters:hover {
+    background-color: #d4422f;
+    top: -5px;
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+.acordeonNsNs h1 {
+    margin: 0;
+    line-height: 2;
+    text-align: center;
+}
+
+/* .acordeonNsNs h2 {
+    margin: 0 0 0.5em;
+    font-weight: normal;
+    cursor: pointer;
+} */
+
+.acordeonNsNs .tab-content h2 {
+    margin: -10px 0 0.5em;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.acordeonNsNs .tab-content h2:focus {
+    cursor: pointer;
+    border: 4px solid #E13019 !important;
+}
+
+
+.acordeonNsNs input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.acordeonNsNs .row {
+    display: flex;
+}
+
+.acordeonNsNs .row .col {
+    flex: 1;
+}
+
+.acordeonNsNs .row .col:last-child {
+    margin-left: 0px;
+}
+
+.LetterAcordeon {
+    background-color: #ff4c35;
+    color: white;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.divContentLetter {
+    display: flex;
+    align-items: center;
+}
+
+.divContentLetter h1 {
+    font-size: 20px;
+    color: white;
+    margin-left: 12px;
+    font-weight: bolder;
+}
+
+/* Accordion styles */
+.acordeonNsNs .tabs {
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.acordeonNsNs .tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+.acordeonNsNs .tab input:focus{
+    width: 100%;
+    color: rgb(66, 8, 8);
+    /* overflow: hidden; */
+    outline: 1px solid rgb(75, 200, 7);
+}
+
+/* color: #a01300 !important; */
+
+.acordeonNsNs .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    background: #32485e;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 10px;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-bottom: 1px solid white;
+}
+
+.acordeonNsNs .tab-label:hover {
+    background: rgb(182, 55, 38);
+}
+.acordeonNsNs .tab-label:focus {
+    /* color: #a01300 !important; */
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+    /* background-color:yellow; */
+}
+
+.acordeonNsNs .tab-label h2:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+
+
+div[tabindex="0"]:focus {
+    outline: 4px dashed orange;
+}
+
+.acordeonNsNs .tab-label::after {
+    content: "❯";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+    margin-right: 11px;
+    color: white;
+}
+
+.acordeonNsNs .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    transition: all 0.2s;
+    margin: 10px;
+    margin-top: -10px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+
+
+/* h2:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+} */
+/* .acordeonNsNs .tab-content h2 {
+    margin: 0;
+    padding: 0;
+} */
+
+.acordeonNsNs .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+
+.acordeonNsNs .tab-close:hover {
+    background: #1a252f;
+}
+
+.acordeonNsNs input:checked+.tab-label {
+    background: #b83727;
+}
+
+.acordeonNsNs input:checked+.tab-label::after {
+    transform: rotate(90deg);
+}
+
+.acordeonNsNs input:checked~.tab-content {
+    max-height: fit-content;
+    padding: 1em;
+    background-color: rgb(242, 242, 242);
+    margin: 10px;
+    margin-top: 0px;
+}
+
+
+/* slider --------------------------- */
+.sliderNSNS {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px;
+    margin-top: -12px;
+    filter: brightness(0.6);
+    animation: hidde 30s infinite alternate ease-in-out;
+}
+
+.sliderNSNS ul {
+    display: flex;
+    padding: 0;
+    opacity: 1;
+    width: 400%;
+    animation: cambio 30s infinite alternate steps(1);
+}
+
+.sliderNSNS li {
+    width: 100%;
+    list-style: none;
+}
+
+.sliderNSNS img {
+    width: 100%;
+}
+
+@keyframes hidde {
+    0% {
+        opacity: 1;
+    }
+
+    19% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {}
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -150%;
+    }
+
+    45% {
+        margin-left: -150%;
+    }
+
+    50% {
+        margin-left: -300%;
+    }
+
+    70% {
+        margin-left: -300%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
+
+/* filter content ------------------- */
+
+.contentGLossaryNsns .filterContent {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    padding-inline: 90px;
+}
+
+.contentGLossaryNsns .filterContent .content1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.contentGLossaryNsns .filterContent .content1 h1 {
+    font-size: 20px;
+    margin-right: 19px;
+    margin-top: 3px;
+}
+
+.contentGLossaryNsns .filterContent .content1 input {
+    padding: 9px;
+    padding-right: 30px;
+    border-radius: 5px;
+    border: 2px solid #b3b3b3;
+    outline: none;
+}
+
+.contentGLossaryNsns .filterContent .content1 img {
+    width: 17px;
+    margin-top: 10px;
+    position: relative;
+    left: -25px;
+    cursor: pointer;
+}
+
+.contentGLossaryNsns .filterContent .content2 {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 22px;
+    margin-right: 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.contentGLossaryNsns .filterContent .content2 h1 {
+    font-size: 20px;
+    margin-right: 19px;
+    margin-top: 3px;
+    font-weight: lighter;
+}
+
+.contentGLossaryNsns .filterContent .content2 div {
+    display: flex;
+}
+
+.contentGLossaryNsns .filterContent .content2 h1 {
+    font-size: 20px;
+    margin-right: 19px;
+    margin-top: 3px;
+    font-weight: lighter;
+}
+
+.contentGLossaryNsns .filterContent .content2 div {
+    display: flex;
+    flex-direction: row;
+}
+
+.contentGLossaryNsns .filterContent .content2 h2 {
+    margin-right: 9px;
+    margin-top: 3px;
+    background-color: white;
+    padding: 3px;
+    font-size: 16px;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 2px solid #E13019;
+    color: #E13019;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contentGLossaryNsns .filterContent .content2 .h2Active {
+    margin-right: 9px;
+    margin-top: 3px;
+    color: white;
+    padding: 3px;
+    font-size: 16px;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 2px solid #E13019;
+    background-color: #E13019;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contentGLossaryNsns .filterContent .content2 h2:hover {
+    background-color: #E13019;
+    border: 2px solid #E13019;
+    color: #ffffff;
+}
+
+.contentGLossaryNsns .filterContent .content3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.contentGLossaryNsns .filterContent .content3 h1 {
+    font-size: 20px;
+    margin-right: 19px;
+    margin-top: 3px;
+    text-align: left;
+    width: 120px;
+    margin-left: -60px;
+    font-weight: lighter;
+}
+
+.contentGLossaryNsns .filterContent .content3 div h2 {
+    font-size: 14px;
+    background-color: white;
+    padding: 8px;
+    border: 2px solid #c3c3c3;
+    font-weight: lighter;
+    margin-bottom: 0px;
+    width: 160px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contentGLossaryNsns .filterContent .content3 div h2:hover {
+    background-color: rgb(237, 237, 237);
+}
+
+.contentGLossaryNsns .filterContent .content3 div h2 img {
+    width: 13px;
+    margin-left: 40px;
+}
+
+/* glossary content ----------------------------- */
+.contentGLossary {
+    margin: 90px;
+    margin-top: 20px;
+}
+
+.contentGLossary .titleGlossary {
+    font-size: 26px;
+    color: #898989;
+}
+
+.contentGLossary .titleGlossary span {
+    color: #E13019;
+}
+
+.contentGLossary .contentAllGlossary .glossary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #bbb1b1;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+.contentGLossary .contentAllGlossary .glossary h1 {
+    margin: 0px;
+    background-color: #191736;
+    color: white;
+    font-size: 30px !important;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+}
+
+.contentGLossary .contentAllGlossary .glossary h2 {
+    margin: 0px;
+    font-size: 21px;
+    padding-left: 20px;
+    background-color: #E13019;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.contentGLossary .contentAllGlossary .glossary img {
+    padding: 22px;
+    font-size: 16px;
+    margin-left: -59px;
+    left: -9px;
+    position: relative;
+    z-index: 5;
+}
+
+.contentGLossary .parrafGlossary p {
+    background-color: #f3efef;
+    padding: 30px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width:1272px) {
+    .contentHeaderNsns .headerNsns {
+        margin-top: -80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        font-family: "Roboto", sans-serif;
+        height: 510px;
+        z-index: 4;
+        position: relative;
+    }
+
+    .sliderNSNS li {
+        width: 100%;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    .sliderNSNS img {
+        min-width: 1840px;
+        height: 500px;
+    }
+
+    .divContentLetter h1 {
+        font-size: 15px;
+        color: white;
+        margin-left: 12px;
+        font-weight: bold;
+    }
+
+    .contentHeaderNsns .headerNsns h1 {
+        color: white;
+        font-size: 29px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .selectLetters .labelLetters {
+        background-color: #32485e;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        margin: 5px;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        transition: 0.1s;
+        position: relative;
+        top: 0px;
+        font-weight: bold;
+    }
+}

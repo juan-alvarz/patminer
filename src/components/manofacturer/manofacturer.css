@@ -1,0 +1,64 @@
+.manofacturer table th {
+    background: #ccc;
+    font-weight: bold;
+}
+
+.manofacturer {
+    height: auto;
+    margin: 50px;
+    min-height: 530px;
+}
+
+.manofacturer table th, .manofacturer table td {
+    /* padding: 0.5rem !important; */
+    /* text-align: left !important; */
+    font-size: 15px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.manofacturer table {
+    width: 100% !important;
+    border-bottom: 1px solid #ccc !important;
+}
+
+.manofacturer h1 {
+    background: #e13019 !important;
+    color: #fff !important;
+}
+.trHead th{
+    background: #e13019 !important;
+    color: #fff !important;
+}
+
+.tdBody td{
+    background: #fff !important;
+    color: #000 !important;
+}
+
+.manofacturer h3 {
+    color: #e13019 !important;
+    font-weight: normal !important;
+}
+
+.manofacturerTable {
+    overflow-x: scroll;
+    padding-bottom: 70px;
+}
+
+.contentTables {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titleDiv{
+    background-color: #d6d6d6;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #bebebe;
+}
+.ContentDiv {
+    text-align: center;
+    padding: 10px;
+}

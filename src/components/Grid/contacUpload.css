@@ -1,0 +1,477 @@
+.HeaderContact .headerContact {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+  background-size: cover;
+  position: relative;
+}
+
+.myrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  column-count: 2;
+}
+
+/* slider --------------------------- */
+.sliderContactUs {
+  height: 360px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+  margin-top: -12px !important;
+  filter: brightness(0.6);
+  animation: hidde 30s infinite alternate ease-in-out;
+}
+
+.sliderContactUs ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 30s infinite alternate steps(1);
+}
+
+.sliderContactUs li {
+  width: 100%;
+  list-style: none;
+}
+
+.sliderContactUs img {
+  width: 100%;
+}
+
+@keyframes hidde {
+  0% {
+    opacity: 1;
+  }
+
+  19% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+  }
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -150%;
+  }
+
+  45% {
+    margin-left: -150%;
+  }
+
+  50% {
+    margin-left: -300%;
+  }
+
+  70% {
+    margin-left: -300%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+
+  100% {
+    margin-left: -300%;
+  }
+}
+
+.HeaderContact .headerContact h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: -20px;
+}
+
+.HeaderContact .headerContact h2 {
+  text-align: center;
+  color: white;
+  width: 500px;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.HeaderContact .headerContact button {
+  background-color: #e94a35;
+  color: white;
+  padding: 14px;
+  font-size: 17px;
+  border: 0px;
+  padding-inline: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s;
+}
+
+.HeaderContact .headerContact button:hover {
+  color: #e94a35;
+  background-color: white;
+}
+
+/* ContactFormComp ----------------------------- */
+
+.ContactFormCompComponent .Contact {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+.MyContactForm .Contact {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+.ContactFormCompComponent .Contact .lastChild {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MyContactForm .Contact .lastChild {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid #cdcdcd;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid #cdcdcd;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs span {
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs span {
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs2 span {
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs2 span {
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs2 input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid #cdcdcd;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs2 input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid #cdcdcd;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs3 span {
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs3 span {
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.ContactFormCompComponent .Contact .lastChild .contentInputs3 textarea {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid #cdcdcd;
+  min-height: 150px;
+  max-height: 150px;
+  width: 97%;
+  min-width: 97%;
+  max-width: 97%;
+}
+
+.MyContactForm .Contact .lastChild .contentInputs3 textarea {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid #cdcdcd;
+  min-height: 150px;
+  max-height: 150px;
+  width: 97%;
+  min-width: 97%;
+  max-width: 97%;
+}
+
+.ContactFormCompComponent {
+  background-color: #f3f3f3;
+  padding-top: 1px;
+  margin: 340px;
+  margin-bottom: 90px;
+  margin-top: -90px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 18px 0px #00000036;
+}
+
+.MyContactForm {
+  background-color: #f3f3f3;
+  padding-top: 1px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 18px 0px #00000036;
+}
+
+.ContactFormCompComponent .Submit {
+  width: 97%;
+  padding: 10px;
+  background-color: #e94a35;
+  color: white;
+  border: 0px;
+  margin-top: 21px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.MyContactForm .Submit {
+  width: 97%;
+  padding: 10px;
+  background-color: #e94a35;
+  color: white;
+  border: 0px;
+  margin-top: 21px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.ContactFormCompComponent .Submit:hover {
+  color: #e94a35;
+  background-color: white;
+}
+
+.MyContactForm .Submit:hover {
+  color: #e94a35;
+  background-color: white;
+}
+
+@media screen and (max-width: 920px) {
+  .sliderContactUs li {
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+  }
+  .sliderContactUs img {
+    min-width: 1270px;
+    height: 390px;
+  }
+}
+@media screen and (max-width: 1158px) {
+  .ContactFormCompComponent {
+    background-color: #f3f3f3;
+    padding-top: 1px;
+    margin: 60px;
+    margin-top: -90px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 0px #00000036;
+  }
+}
+@media screen and (max-width: 412px) {
+  .ContactFormCompComponent {
+    background-color: #f3f3f3;
+    padding-top: 1px;
+    margin: 10px;
+    margin-top: -90px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 0px #00000036;
+  }
+  .ContactFormCompComponent .Contact {
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+  }
+  .ContactFormCompComponent .Contact .lastChild {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .ContactFormCompComponent .Contact .lastChild .contentInputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  .HeaderContact .headerContact h2 {
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 25px;
+    font-weight: lighter;
+  }
+  .ContactFormCompComponent .Contact .lastChild .contentInputs2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  .ContactFormCompComponent .Contact .lastChild .contentInputs3 textarea {
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid #cdcdcd;
+    min-height: 150px;
+    max-height: 150px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .ContactFormCompComponent .Submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #e94a35;
+    color: white;
+    border: 0px;
+    margin-top: 21px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+}
+
+input.invalid,
+select.invalid {
+  border: red solid 2px !important;
+}
