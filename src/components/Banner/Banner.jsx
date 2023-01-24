@@ -5,7 +5,8 @@ import { CloudUpload } from "@material-ui/icons";
 
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/all";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import IframeSearchPart from "components/IframeElectronics/IframeSeatchPart";
 gsap.registerPlugin(ScrollToPlugin)
 
 
@@ -26,7 +27,7 @@ const AuxP = styled("p")(({ theme }) => ({
   color: "white",
   fontSize: "1.5rem",
   width: "70%",
-  [theme.breakpoints.down('md')]:{
+  [theme.breakpoints.down('md')]: {
     fontSize: "1.8rem",
     width: "100%",
     textAlign: "center",
@@ -118,7 +119,6 @@ const ContentContainer = styled(Box)(({ theme }) => ({
 
 
 export default function Banner() {
-
   const MainContainer = styled(Box)(({ theme }) => ({
     zIndex: -1,
     marginTop: '-1rem',
@@ -134,6 +134,14 @@ export default function Banner() {
     }
   }))
 
+  const [inputValue, setInputValue] = useState('')
+  const [searchPart, setParSearch] = useState('')
+
+  const handleInputChange = e => {
+    e.preventDefault()
+    setInputValue(e.target.value)
+  }
+
 
   return (
     <>
@@ -145,8 +153,13 @@ export default function Banner() {
           <InputContainer>
             <InputPart
               placeholder="Search Electronic Component"
+              value={inputValue}
+              onChange={e => handleInputChange(e)}
+              autoFocus={true}
             />
-            <ButtonSearch>SEARCH</ButtonSearch>
+            <ButtonSearch
+              onClick={e => setParSearch(inputValue)}
+            >SEARCH</ButtonSearch>
           </InputContainer>
           <InputContainer>
             <AuxP>
@@ -159,6 +172,9 @@ export default function Banner() {
           </InputContainer>
         </ContentContainer>
       </MainContainer>
+      <div id='iframe-searchpart'>
+        <IframeSearchPart searchPart={searchPart} />
+      </div>
     </>
 
   )

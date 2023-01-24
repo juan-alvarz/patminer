@@ -7,7 +7,7 @@ import Footer from "./../../components/home/footer/footer";
 const ContactUs = () => {
     return (
         <div>
-            <div className='menuColor2'>
+            <div className='menuColor1'>
                 <Menu />
             </div>
             <div>

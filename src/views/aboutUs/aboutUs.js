@@ -18,7 +18,6 @@ export default function AboutUs() {
         <AboutContent />
       </div>
       <div>
-        <FooterBanner />
         <AltFooter />
       </div>
     </>

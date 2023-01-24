@@ -6,7 +6,7 @@ import { baseUrlContact } from "./../../httpBaseUrl.js";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { styled } from "@mui/system";
-import {  Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { DropzoneArea } from "material-ui-dropzone";
 
 const ItemGridInput = styled(Grid)({
@@ -313,7 +313,7 @@ const FormContact = () => {
                     wordWrap: "break-word",
                   }}
                 >
-                  All uploaded files must be less than 5MB in size. If you file
+                  All uploaded files must be less than 5MB in size. If your file
                   exceeds this limit, feel free to contact us at
                   <span className="underline">info@part-miner.com</span> and we wil
                   be more than happy to assist you.

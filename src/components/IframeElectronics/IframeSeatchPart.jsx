@@ -21,16 +21,16 @@ const IFrameContainer = styled(Box)(({ theme }) => ({
   height: '50rem',
 }))
 
-export default function IframeSearchPart({ queryAux = 'led' }) {
+export default function IframeSearchPart({ searchPart }) {
   const [loadPage, setLoadPage] = useState(false);
   // const [searchPart, setSearchPart] = useState("");
   useEffect(() => {
     typeof window !== "undefined" ? setLoadPage(true) : setLoadPage(false);
     if (loadPage) {
-      getWebLink(queryAux);
+      getWebLink(searchPart);
     }
     scrollToIframe();
-  }, [loadPage, queryAux]);
+  }, [loadPage, searchPart]);
 
   return (
     <>

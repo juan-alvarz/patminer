@@ -7,6 +7,7 @@ import logoImg from '../../../assets/footer/logo-footer.svg';
 import { Box, styled } from "@mui/system";
 import { useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
+import FooterBanner from "../../../components/Banner/FooterBanner";
 
 const FooterContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "#040627",
@@ -48,6 +49,7 @@ const InputPart = styled("input")(({ theme }) => ({
 
 const ButtonSearch = styled("button")(({ theme }) => ({
     border: 'none',
+    outline: 'none',
     backgroundColor: "#D0402B",
     color: "white",
     width: "20%",
@@ -147,6 +149,7 @@ function FooterMobile() {
     });
     return (
         <>
+            <FooterBanner />
             <FooterContainer>
                 <MainContainer>
                     <Box>
@@ -249,102 +252,105 @@ function FooterMobile() {
 
 function FooterDesktop() {
     return (
-        <FooterContainer>
-            <FooterContent>
-                <Box
-                    style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        width: "100%",
-                    }}
-                >
-                    <InputContainer>
-                        <Box style={{ width: "70%" }}>
-                            <InputPart
-                                type="text"
-                                placeholder="Search part..."
-                                className="shadow-inner shadow-gray-600 focus:ring focus:ring-[#D0402B]"
-                            />
-                        </Box>
-                        <ButtonSearch>SEARCH</ButtonSearch>
-                    </InputContainer>
-                    <Box style={{ position: "relative", right: "3vw" }}>
-                        <ButtonSearch style={{ width: '15rem', padding: '1rem' }}>
-                            CONTACT US
-                        </ButtonSearch>
-                    </Box>
-                </Box>
-                <Box style={{ display: "flex", justifyContent: "space-between" }}>
-                    <FooterInputSearchP>
-                        Search by Electronic Part Number
-                    </FooterInputSearchP>
-                    <Box style={{ marginTop: "2rem" }}>
-                        <YourFeedbackP>Your feedback is appreciated</YourFeedbackP>
-                        <ContactInformationP>
-                            <IconContainer src={phoneImg} alt="phone" /> +1
-                            (603) 218-3767
-                        </ContactInformationP>
-                        <ContactInformationP>
-                            <IconContainer src={mailImg} alt="mail" />{" "}
-                            COMMENTS@PART-MINER.COM
-                        </ContactInformationP>
-                    </Box>
-                </Box>
-                <Box style={{ display: "flex", justifyContent: "space-between" }}>
-                    <Box>
-                        <Link to="/web/">
-                            <img src={logoImg} alt="logo-footer" />
-                        </Link>
-                    </Box>
+        <>
+            <FooterBanner />
+            <FooterContainer>
+                <FooterContent>
                     <Box
                         style={{
                             display: "flex",
-                            alignItems: "center",
-                            position: "relative",
-                            marginTop: "3rem",
-                        }}
-                    >
-                        <a title="facebook" href="https://www.facebook.com/PartminerIndustries" style={{ marginRight: "1rem" }}>
-                            <img src={facebookImg} alt="facebook" />
-                        </a>
-                        <a href="https://www.linkedin.com/" title='linkedin'>
-                            <img src={linkedinImg} alt="linkedIn" />
-                        </a>
-                    </Box>
-                </Box>
-                <Box
-                    style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        borderTop: "1px solid #363852",
-                        padding: "2rem 0rem 7rem",
-                        marginTop: "2rem",
-                    }}
-                >
-                    <Box
-                        style={{
-                            width: "50%",
                             justifyContent: "space-between",
-                            display: "flex",
+                            width: "100%",
                         }}
                     >
-                        <LinksFooter href="/about">ABOUT US</LinksFooter>
-                        <LinksFooter href="/web/fsg/1">
-                            LINE CARD
-                        </LinksFooter>
-                        <LinksFooter href="/contact">CONTACT US</LinksFooter>
-                        <LinksFooter href="/web/terms">
-                            TERMS AND CONDITIONS
-                        </LinksFooter>
+                        <InputContainer>
+                            <Box style={{ width: "70%" }}>
+                                <InputPart
+                                    type="text"
+                                    placeholder="Search part..."
+                                    className="shadow-inner shadow-gray-600 focus:ring focus:ring-[#D0402B]"
+                                />
+                            </Box>
+                            <ButtonSearch>SEARCH</ButtonSearch>
+                        </InputContainer>
+                        <Box style={{ position: "relative", right: "3vw" }}>
+                            <ButtonSearch style={{ width: '15rem', padding: '1rem' }}>
+                                CONTACT US
+                            </ButtonSearch>
+                        </Box>
                     </Box>
-                    <Box>
-                        <CopyrightP>
-                            Copyright © 2022 PartMiner Industries. All Rights Reserved.
-                        </CopyrightP>
+                    <Box style={{ display: "flex", justifyContent: "space-between" }}>
+                        <FooterInputSearchP>
+                            Search by Electronic Part Number
+                        </FooterInputSearchP>
+                        <Box style={{ marginTop: "2rem" }}>
+                            <YourFeedbackP>Your feedback is appreciated</YourFeedbackP>
+                            <ContactInformationP>
+                                <IconContainer src={phoneImg} alt="phone" /> +1
+                                (603) 218-3767
+                            </ContactInformationP>
+                            <ContactInformationP>
+                                <IconContainer src={mailImg} alt="mail" />{" "}
+                                COMMENTS@PART-MINER.COM
+                            </ContactInformationP>
+                        </Box>
                     </Box>
-                </Box>
-            </FooterContent>
-        </FooterContainer>
+                    <Box style={{ display: "flex", justifyContent: "space-between" }}>
+                        <Box>
+                            <Link to="/web/">
+                                <img src={logoImg} alt="logo-footer" />
+                            </Link>
+                        </Box>
+                        <Box
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                position: "relative",
+                                marginTop: "3rem",
+                            }}
+                        >
+                            <a title="facebook" href="https://www.facebook.com/PartminerIndustries" style={{ marginRight: "1rem" }}>
+                                <img src={facebookImg} alt="facebook" />
+                            </a>
+                            <a href="https://www.linkedin.com/" title='linkedin'>
+                                <img src={linkedinImg} alt="linkedIn" />
+                            </a>
+                        </Box>
+                    </Box>
+                    <Box
+                        style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            borderTop: "1px solid #363852",
+                            padding: "2rem 0rem 7rem",
+                            marginTop: "2rem",
+                        }}
+                    >
+                        <Box
+                            style={{
+                                width: "50%",
+                                justifyContent: "space-between",
+                                display: "flex",
+                            }}
+                        >
+                            <LinksFooter href="/about">ABOUT US</LinksFooter>
+                            <LinksFooter href="/web/fsg/1">
+                                LINE CARD
+                            </LinksFooter>
+                            <LinksFooter href="/contact">CONTACT US</LinksFooter>
+                            <LinksFooter href="/web/terms">
+                                TERMS AND CONDITIONS
+                            </LinksFooter>
+                        </Box>
+                        <Box>
+                            <CopyrightP>
+                                Copyright © 2022 PartMiner Industries. All Rights Reserved.
+                            </CopyrightP>
+                        </Box>
+                    </Box>
+                </FooterContent>
+            </FooterContainer>
+        </>
     );
 }
 

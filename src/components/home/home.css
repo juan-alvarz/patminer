@@ -1223,8 +1223,9 @@ div[tabindex="0"]:focus {
 }
 
 .menu li a {
+    font-size: 1.6rem;
     padding: 0.7rem 0 0.7rem 1rem;
-    color: #e13019 !important;
+    /* color: #e13019 !important; */
 }
 
 .menu li .megamenu,

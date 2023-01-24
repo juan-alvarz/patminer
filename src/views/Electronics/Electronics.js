@@ -13,10 +13,9 @@ const Electronics = () => (
     </div>
     <div>
       <Banner />
-      <div id="iframe-searchpart">
+      {/* <div id="iframe-searchpart">
         <IframeSearchPart />
-      </div>
-      <FooterBanner />
+      </div> */}
       <AltFooter />
     </div>
   </div>

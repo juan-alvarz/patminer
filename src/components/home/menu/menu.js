@@ -1,3 +1,11 @@
+// import AltMenu from "./AltMenu";
+
+// export default function Menu(){
+//   return (
+//     <AltMenu/>
+//   )
+// }
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import './../home.css';
@@ -6,11 +14,11 @@ import Logo from "./../../../assets/home/logoOriginal.png";
 import MenuIcon from "./../../../assets/home/MenuIcon.svg";
 import { Box, styled } from '@mui/material';
 
-const LinkTo = styled(Link)(({theme}) => ({
-  color:'black',
-  transition:'.3s all',
-  '&:hover':{
-    color:'#D0402B'
+const LinkTo = styled(Link)(({ theme }) => ({
+  color: 'black !important',
+  transition: '.3s all',
+  '&:hover': {
+    color: '#D0402B'
   }
 }))
 
@@ -20,10 +28,10 @@ const Menu = () => {
 
   function ShowModalMenu(show) {
     if (show === true) {
-      setmodalMenu({ left: '0%', visibility: 'visible' });	
+      setmodalMenu({ left: '0%', visibility: 'visible' });
       // setVisibily({ visibility: 'visible'});	
     } else {
-      setmodalMenu({ left: '100%',  visibility: 'hidden' });
+      setmodalMenu({ left: '100%', visibility: 'hidden' });
       // setVisibily({ visibility: 'hidden'});	
     }
   }
@@ -63,7 +71,7 @@ const Menu = () => {
                     <LinkTo to='/web/aboutus'>ABOUT US</LinkTo>
                   </li>
                   <li className="d-xl-show submenu-container">
-                    <LinkTo to="/web/contactUs"><a title='contactUs' className="btn btn-rounded btn-solid gra-reversed btn-purchase">CONTACT US</a></LinkTo>
+                    <LinkTo to="/web/contactUs"><a title='contactUs' className="btn btn-solid gra-reversed btn-purchase" style={{ borderRadius: '1rem', border: 'none', fontSize: '1.5rem' }}>CONTACT US</a></LinkTo>
                   </li>
                 </ul>
               </nav>
@@ -73,20 +81,20 @@ const Menu = () => {
       </header>
 
       <div className='MenuMovilContent'>
-      <Link to="/web/">
-        <span className="logo">
-        <img src={Logo} alt="Logo" className='imgFirst' />
-        </span>
-      </Link>  
+        <Link to="/web/">
+          <span className="logo">
+            <img src={Logo} alt="Logo" className='imgFirst' />
+          </span>
+        </Link>
         <img src={MenuIcon} alt="Menu" className='imgLast' onClick={() => { ShowModalMenu(true) }} />
       </div>
       {/* <div className='MenuMovilOptions'></div> */}
       {/* <div  className='MenuMovilOptions' style={"visibility:hidden"}> */}
-      <div  className='MenuMovilOptions' style={modalMenu}>
+      <div className='MenuMovilOptions' style={modalMenu}>
         <div className='Close'>
           <h1 onClick={() => { ShowModalMenu(false) }}>X</h1>
         </div>
-        <div  className='Options'>
+        <div className='Options'>
           <Link to="/web/" className='href'>HOME</Link>
           <Link to="/web/electronics" className='href'>ELECTRONICS</Link>
           <Link to="/web/rfq" className='href'>RFQ</Link>
@@ -96,7 +104,7 @@ const Menu = () => {
           <Link to="/web/aboutus" className='href2'>ABOUT US</Link>
         </div>
       </div>
-      
+
     </>
   )
 }
