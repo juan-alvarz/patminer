@@ -4,6 +4,15 @@ import './../home.css';
 import { Link } from "react-router-dom";
 import Logo from "./../../../assets/home/logoOriginal.png";
 import MenuIcon from "./../../../assets/home/MenuIcon.svg";
+import { Box, styled } from '@mui/material';
+
+const LinkTo = styled(Link)(({theme}) => ({
+  color:'black',
+  transition:'.3s all',
+  '&:hover':{
+    color:'#D0402B'
+  }
+}))
 
 const Menu = () => {
   const [modalMenu, setmodalMenu] = useState({ left: '100%', visibility: 'hidden' });
@@ -36,22 +45,25 @@ const Menu = () => {
               <nav className="main-nav d-lg-block d-none" >
                 <ul className="menu menu-active-underline">
                   <li >
-                    <Link to="/web/" >HOME</Link>
+                    <LinkTo to="/web/" >HOME</LinkTo>
                   </li>
                   <li>
-                    <Link to='/web/electronics'>ELECTRONICS</Link>
+                    <LinkTo to='/web/electronics'>ELECTRONICS</LinkTo>
                   </li>
                   <li>
-                    <Link to="/web/rfq">RFQ</Link>
+                    <LinkTo to="/web/rfq">RFQ</LinkTo>
                   </li>
                   <li>
-                    <Link to="/web/nsns">NSNS</Link>
+                    <LinkTo to="/web/nsns">NSNS</LinkTo>
                   </li>
                   <li>
-                    <Link to="/web/fsg/1">FSC LINE CARD</Link>
+                    <LinkTo to="/web/fsg/1">FSC LINE CARD</LinkTo>
+                  </li>
+                  <li>
+                    <LinkTo to='/web/aboutus'>ABOUT US</LinkTo>
                   </li>
                   <li className="d-xl-show submenu-container">
-                    <Link to="/web/contactUs"><a title='contactUs' className="btn btn-rounded btn-solid gra-reversed btn-purchase">CONTACT US</a></Link>
+                    <LinkTo to="/web/contactUs"><a title='contactUs' className="btn btn-rounded btn-solid gra-reversed btn-purchase">CONTACT US</a></LinkTo>
                   </li>
                 </ul>
               </nav>
@@ -81,6 +93,7 @@ const Menu = () => {
           <Link to="/web/nsns" className='href'>NSNS</Link>
           <Link to="/web/fsg/1" className='href'>FSC LINE CAR</Link>
           <Link to="/web/contactUs" className='href2'>CONTACT US</Link>
+          <Link to="/web/aboutus" className='href2'>ABOUT US</Link>
         </div>
       </div>
       
