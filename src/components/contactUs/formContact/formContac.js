@@ -5,9 +5,28 @@ import AWN from "awesome-notifications";
 import { baseUrlContact } from "./../../httpBaseUrl.js";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import Button from "@mui/material/Button";
+import { styled } from "@mui/system";
+import {  Grid } from "@mui/material";
+import { DropzoneArea } from "material-ui-dropzone";
+
+const ItemGridInput = styled(Grid)({
+  display: "flex",
+  flexDirection: "column",
+  fontWeight: 500,
+  color: "#1E1E1E",
+});
+
+const FileIndicationsText = styled("p")({
+  fontWeight: 600,
+  color: "black",
+  fontSize: "1.5rem",
+  marginBottom: ".3rem",
+});
+
 
 const FormContact = () => {
+  // const classes = useStyles()
+  const [selectedFile, setSelectedFile] = useState(null);
   const [phoneNumber, setPhoneNumber] = useState();
 
   let globalOptions = {
@@ -17,6 +36,11 @@ const FormContact = () => {
     durations: 100,
   };
   let notifier = new AWN(globalOptions);
+
+  const handleDrop = (files) => {
+    console.log(files[0]);
+    setSelectedFile(files[0])
+  }
 
   //--Phonemask
   // setTimeout(() => {
@@ -46,6 +70,7 @@ const FormContact = () => {
     const phoneEl = document.getElementById("phoneInput");
     const companyEl = document.getElementById("inputContactCompany");
     const commentEl = document.getElementById("inputContactComments");
+    const fileEl = selectedFile;
 
     const inputFormEl = [
       firstNameEl,
@@ -92,6 +117,7 @@ const FormContact = () => {
       phone: phoneNumber.toString().slice(1),
       company: companyEl.value,
       comments: commentEl.value,
+      uploadRFQ: fileEl
     };
 
     if (!invalidExist) {
@@ -252,10 +278,50 @@ const FormContact = () => {
                   id="inputContactCompany"
                 />
               </div>
-              <div className="contentInputs3">
+              <div className="contentInputs3" style={{ padding: '2rem 0' }}>
                 <span>ADDITIONAL COMMENTS AND INSTRUCTION</span>
                 <textarea type="text" id="inputContactComments" />
               </div>
+              <DropzoneArea
+                // accept=".xls, .xlsv, .csv, .txt, .pdf, .doc, .docx"
+                acceptedFiles={[".xls", ".xlsv", ".csv", ".txt", ".pdf", ".doc", ".docx"]}
+                onDrop={handleDrop}
+                filesLimit={1}
+                showPreviews={true}
+                showPreviewsInDropzone={false}
+                useChipsForPreview
+                previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
+                previewText="Selected files"
+              />
+              <ItemGridInput item xs={12}>
+                <FileIndicationsText>
+                  Can I submit a file in any format?
+                </FileIndicationsText>
+                <FileIndicationsText
+                  style={{ fontWeight: 400, marginBottom: "1rem" }}
+                >
+                  The file must be in either .XLS, .XLSX, .CSV, .TXT, .PDF, .DOC, or
+                  .DOCX format
+                </FileIndicationsText>
+                <FileIndicationsText>
+                  Are there any file size limitations?
+                </FileIndicationsText>
+                <FileIndicationsText
+                  style={{
+                    fontWeight: 400,
+                    marginBottom: "1rem",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  All uploaded files must be less than 5MB in size. If you file
+                  exceeds this limit, feel free to contact us at
+                  <span className="underline">info@part-miner.com</span> and we wil
+                  be more than happy to assist you.
+                </FileIndicationsText>
+                <FileIndicationsText style={{ fontWeight: 400 }}>
+                  *Mandatory fields.
+                </FileIndicationsText>
+              </ItemGridInput>
               <button
                 type="submit"
                 onClick={(e) => sendContactForm(e)}
